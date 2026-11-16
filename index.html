@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tyler Lindenmuth</title>
+<meta name="description" content="Site description goes here.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Tyler Lindenmuth</div>
+    <nav aria-label="Site navigation">
+      <ul>
+        <li><button type="button" data-target="about" aria-current="page">About</button></li>
+        <li class="has-sub">
+          <button type="button" aria-haspopup="true" aria-expanded="false">Professional Materials<span class="caret" aria-hidden="true">&#9662;</span></button>
+          <ul class="sub">
+            <li><button type="button" data-target="resume">Resume</button></li>
+            <li><button type="button" data-target="cover-letter">Cover Letter</button></li>
+            <li><button type="button" data-target="mini-interview">Mini Interview</button></li>
+          </ul>
+        </li>
+        <li><button type="button" data-target="writing-instructions">Writing Sample: Instructions</button></li>
+        <li><button type="button" data-target="writing-proposal">Writing Sample: Proposal</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about" tabindex="-1">
+    <h1>About Me</h1>
+    <p class="lede">My name is Tyler Lindenmuth, and I am a student at the University of Central Florida pursuing a Bachelor's degree in Computer Science.
+                    I'm currently contracted by Lockheed Martin through UCF as a part of their College Work Experience Program (CWEP), where I work as a Software Engineer.
+    </p>
+    <h2>Experience</h2>
+    <div class="box">
+      <div class="box-head">
+        <h3>UCF CWEP with Lockheed Martin</h3>
+        <span class="dates">July 2026 – Present</span>
+      </div>
+      <p>Software Engineer</p>
+    </div>
+    <div class="box">
+      <div class="box-head">
+        <h3>Jeremiah's Italian Ice</h3>
+        <span class="dates">March 2025 – July 2026</span>
+      </div> 
+      <p>Interim Store Manager / Shift Manager</p>
+    </div>
+    <div class="box">
+      <div class="box-head">
+        <h3>UCF Competitive Programming Team</h3>
+        <span class="dates">September 2024 – August 2025</span>
+      </div>
+      <p>Developmental Team Member</p>
+    </div>
+    <div class="box">
+      <div class="box-head">
+        <h3>Noodles & Company</h3>
+        <span class="dates">November 2022 – March 2025</span>
+      </div>
+      <p>Shift Manager</p>
+    </div>
+    <h2>Skills</h2>
+    <details class="box">
+      <summary><h3>Programming Languages</h3></summary>
+      <ul>
+        <li>C++</li>
+        <li>C</li>
+        <li>Java</li>
+      </ul>
+      <div class="gallery">
+        <img src="images/cpp.svg" alt="C++ Logo">
+        <img src="images/c.png" alt="C Logo">
+        <img src="images/java.svg" alt="Java Logo">
+      </div>
+    </details>
+    <details class="box">
+      <summary><h3>Software</h3></summary>
+      <ul>
+        <li>Visual Studio Code</li>
+        <li>JetBrains IDEs</li>
+        <li>Git</li>
+        <li>Microsoft365 Products</li>
+      </ul>
+      <div class="gallery">
+        <img src="images/vscode.svg" alt="Visual Studio Code Logo">
+        <img src="images/jetbrains.png" alt="JetBrains Logo">
+        <img src="images/git.webp" alt="Git Logo">
+        <img src="images/m365.webp" alt="Microsoft 365 Logo">
+      </div>
+    </details>
+  </section>
+
+  <section id="resume" tabindex="-1" hidden>
+    <p class="crumb">Professional Materials</p>
+    <h2>Resume</h2>
+    <p class="lede">A short note about the resume goes here.</p>
+    <div class="slot">Resume preview or embedded PDF goes here</div>
+    <a class="btn" href="#">Download resume</a>
+  </section>
+
+  <section id="cover-letter" tabindex="-1" hidden>
+    <p class="crumb">Professional Materials</p>
+    <h2>Cover Letter</h2>
+    <p class="lede">A short note about the cover letter goes here.</p>
+    <div class="box">
+      <h3>Opening</h3>
+      <p>Opening paragraph goes here.</p>
+    </div>
+    <div class="box">
+      <h3>Body</h3>
+      <p>Body paragraphs go here.</p>
+    </div>
+    <div class="box">
+      <h3>Closing</h3>
+      <p>Closing paragraph goes here.</p>
+    </div>
+  </section>
+
+  <section id="mini-interview" tabindex="-1" hidden>
+    <p class="crumb">Professional Materials</p>
+    <h2>Mini Interview</h2>
+    <p class="lede">A short note about the mini interview goes here.</p>
+    <div class="box">
+      <h3>Question 1</h3>
+      <p>Answer goes here.</p>
+    </div>
+    <div class="box">
+      <h3>Question 2</h3>
+      <p>Answer goes here.</p>
+    </div>
+    <div class="box">
+      <h3>Question 3</h3>
+      <p>Answer goes here.</p>
+    </div>
+  </section>
+
+  <section id="writing-instructions" tabindex="-1" hidden>
+    <p class="crumb">Writing Sample</p>
+    <h2>Instructions</h2>
+    <p class="lede">A short note about the assignment goes here.</p>
+    <div class="box">
+      <h3>Assignment</h3>
+      <p>Instructions text goes here.</p>
+    </div>
+    <div class="box">
+      <h3>Requirements</h3>
+      <p>Requirements, audience, length, and format go here.</p>
+    </div>
+  </section>
+
+  <section id="writing-proposal" tabindex="-1" hidden>
+    <p class="crumb">Writing Sample</p>
+    <h2>Proposal</h2>
+    <p class="lede">A short summary of the proposal goes here.</p>
+    <div class="box">
+      <h3>Section heading</h3>
+      <p>Proposal text goes here.</p>
+    </div>
+    <div class="box">
+      <h3>Section heading</h3>
+      <p>Proposal text goes here.</p>
+    </div>
+    <a class="btn" href="#">Download proposal</a>
+  </section>
+
+</main>
+
+<footer class="wrap">© <span id="yr">2026</span> Tyler Lindenmuth</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

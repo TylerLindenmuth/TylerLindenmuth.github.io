@@ -98,11 +98,34 @@ details.box summary { cursor: pointer; list-style: none; display: flex; justify-
 details.box summary::-webkit-details-marker { display: none; }
 details.box summary h3 { margin: 0; }
 details.box summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--lav-600); }
-details.box[open] summary::after { content: "–"; }
 details.box[open] summary { margin-bottom: 0.75rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { interpolate-size: allow-keywords; }
+
+  /* the content slides open and closed */
+  details.box::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition: block-size .35s ease, content-visibility .35s allow-discrete;
+  }
+  details.box[open]::details-content { block-size: auto; }
+
+  /* the + turns into an x */
+  details.box summary::after { transition: transform .35s ease; }
+  details.box[open] summary::after { transform: rotate(45deg); }
+
+  /* the gap under the heading eases in too */
+  details.box summary { margin-bottom: 0; transition: margin-bottom .35s ease; }
+  details.box[open] summary { margin-bottom: .75rem; }
+}
 
 html { scrollbar-gutter: stable; }
 .lede { max-width: none; }
 
 #about h2 { display: flex; align-items: center; gap: 1rem; margin-top: 2.5rem; }
 #about h2::after { content: ""; flex: 1; height: 3px; background: var(--lav-300); }
+
+.job-head { flex: 1; display: flex; justify-content: space-between; align-items: baseline; gap: .25rem 1rem; flex-wrap: wrap; }
+.job-head h3 { margin: 0; }
+.company { margin: .2rem 0 0; color: var(--muted); font-size: .95rem; font-weight: 500; }
